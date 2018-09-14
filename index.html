@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NY Times Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Code to the Javascript File -->
+    <script src="NYtimes.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class ="col-sm-8 offset-sm-2 nyt-header">
+            <h1>NY Times Search</h1>
+        </div>
+    </div>
+    <div class ="row">
+            <div class ="col-sm-8 offset-sm-2 ">
+                    <div class="card ">
+                            <div class="card-header">
+                              Search Parameters
+                            </div>
+                            <div class="card-body">
+                                Search Term:<br>
+                                <input type = "text" id="query-term" >
+                                <br><br>
+                                Number of Records to Retrieve:<br>
+                                <input type = "text" id="num-articles" >
+                                <br><br>
+                
+                                Start Year (Optional):<br>
+                                <input type = "text" id="start-year" >
+                                <br><br>
+                
+                                End Year (Optional):<br>
+                                <input type = "text" id="end-year" >
+                                <br><br>
+                                <button type="button" class="btn btn-primary btn-sm" id="search-btn">Search</button>
+                                <button type="button" class="btn btn-secondary btn-sm" id="clear-btn">Clear Results</button>
+                            </div>
+                          </div>
+            </div>
+        
+    </div>
+    <br><br>
+    <div class="row">
+            <div class ="col-sm-8 offset-sm-2 ">
+                    
+                    <div class="card">
+                          <div class="card-header" id= "search-results">
+                            Top Articles
+                          </div>
+            </div>
+
+    </div>
+         
+</body>
+</html>
