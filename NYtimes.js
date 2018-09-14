@@ -31,7 +31,7 @@ function runQuery(numArticles, queryURL){
                 var wellSection = $("<div>");
                 wellSection.addClass('well');
                 wellSection.attr('id', 'articleWell-' + articleCounter)
-                $('#search-results').append(wellSection);
+                $('#wellSection').append(wellSection);
 
                 if( NYTData.response.docs[i].byline && NYTData.response.docs[i].byline.hasOwnProperty("original"))
 					{
@@ -50,26 +50,26 @@ function runQuery(numArticles, queryURL){
 }
 	
 	// On Click button associated with the Search Button
-	$('#search-btn').on('click', function(){
+	$('#runSearch').on('click', function(){
 
 		// Initially sets the articleCounter to 0
 		articleCounter = 0;
 
 		// Empties the region associated with the articles
-		$("#search-results").empty();
+		$("#wellSection").empty();
 
 		// Search Term
-		var searchTerm = $('#query-term').val().trim();
+		var searchTerm = $('#searchTerm').val().trim();
 		queryURL = queryURLBase + searchTerm;
 
 		// Num Results
-		numResults = $("#num-articles").val();
+		numResults = $("#numRecordsSelect").val();
 
 		// Start Year
-		startYear = $('#start-year').val().trim();
+		startYear = $('#startYear').val().trim();
 
 		// End Year
-		endYear = $('#end-year').val().trim();
+		endYear = $('#endYear').val().trim();
 
 		// If the user provides a startYear -- the startYear will be included in the queryURL
 		if (parseInt(startYear)) {
@@ -89,8 +89,8 @@ function runQuery(numArticles, queryURL){
 	});	
 
 // This button clears the top articles section
-$('#clear-btn').on('click', function(){
+$('#clearAll').on('click', function(){
 	articleCounter = 0;
-	$("#search-results").empty();
+	$("#wellSection").empty();
 })
 
